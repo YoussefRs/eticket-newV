@@ -1,0 +1,346 @@
+._dash_container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  flex-wrap: wrap;
+  overflow: hidden;
+  background: #fff;
+}
+.main {
+  height: calc(100% - 50px);
+  display: flex;
+  flex: 1;
+}
+.sidebar {
+  height: 100%;
+  width: 220px;
+  box-sizing: border-box;
+  overflow: hidden;
+  transition: width 0.5s ease;
+}
+._dash_container.nav-closed .sidebar,
+._dash_container.nav-closed .header-logo {
+  width: 80px;
+}
+.sidebar ul {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0px;
+  margin-top: 0.5rem;
+  gap: 0.5rem;
+}
+.sidebar ul li {
+  display: flex;
+  align-items: center;
+}
+.sidebar ul li a {
+  color: rgba(31, 35, 73, 1) !important;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 10px 20px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.sidebar ul li a.active,
+.sidebar ul li a:hover {
+  transition: all 0.5s ease;
+  border-left: 8px solid #57bec0;
+  & .svg-container {
+    background: #57bec0;
+    & svg path {
+      fill: #fff;
+      filter: drop-shadow(5px 4px 5px #4ba0a2);
+    }
+  }
+}
+.sidebar ul li span {
+  margin-left: 16px;
+  color: #1E3CAA;
+  text-align: center;
+  font-size: clamp(16px, 1vw, 19px);
+  font-style: normal;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+._active {
+  color: #1E3CAA !important;
+  text-align: center !important;
+  font-family: "TT Commons", sans-serif !important;
+  font-size: 19px !important;
+  font-style: normal !important;
+  font-weight: 700 !important;
+  text-transform: capitalize !important;
+}
+.sidebar ul li i {
+  font-size: 18px;
+  color: #111;
+  font-weight: normal;
+}
+.header {
+  height: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-basis: 100%;
+}
+
+.site-logo {
+  height: 32px;
+  width: 32px;
+  min-height: 32px;
+  min-width: 32px;
+  margin: 0 18px 0 15px;
+}
+.site-logo path {
+  fill: #fff;
+}
+.site-title {
+  color: #fff;
+  font-size: 24px;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+.page-content {
+  max-height: 100%;
+  overflow-y: auto;
+  box-sizing: border-box;
+  border-radius: 50px;
+  width: 100%;
+  flex: 1;
+  background: #F2F5FF;
+  opacity: 0.8;
+  box-shadow: 10px 18px 13px 0px #ebedff inset;
+}
+.scrollable-container::-webkit-scrollbar {
+  display: none;
+}
+.page-content h1 {
+  color: #1E3CAA;
+  text-align: center;
+  font-family: "TT Commons", sans-serif;
+  font-size: clamp(20px, 2vw, 30px);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.header-search {
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  padding: 0 20px 0 0;
+  flex: 1;
+}
+.header-search .button-menu {
+  width: 28px;
+  height: 28px;
+  margin-right: 15px;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 220px;
+  overflow: hidden;
+  transition: width 0.5s ease;
+  cursor: pointer;
+  padding: 0 30px;
+}
+.header-logo img,
+#full-logo {
+  object-fit: cover;
+}
+
+.header-search input[type="search"] {
+  height: 100%;
+  width: 300px;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  font-size: 14px;
+  font-weight: 100;
+  background: none;
+  border: none;
+  color: #fff;
+}
+.header-search input[type="search"]:focus {
+  outline: none;
+}
+.header-search input[type="search"]::placeholder {
+  color: #ccc;
+}
+.header-search .button-menu:focus {
+  outline: none;
+  border: none;
+}
+.header-search .button-menu svg path {
+  fill: #fff;
+}
+@media screen and (max-width: 991px) {
+  .page-content {
+    padding: 0px 20px;
+    width: 0vw;
+  }
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+& .img-box {
+  cursor: pointer;
+}
+& .coin-box {
+  background-color: #f5f7ff;
+  max-width: 200px;
+  min-width: 50px;
+  padding: 0 10px;
+  height: 50px;
+  border-radius: 50px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: space-around;
+  transition: width 0.5s ease, padding 0.5s ease;
+  & .coin-text {
+    display: flex;
+    & span {
+      color: #000;
+      font-family: "Inter", sans-serif;
+      font-size: clamp(20px, 2vw, 27px);
+      font-style: normal;
+      font-weight: 700;
+      text-transform: capitalize;
+    }
+    & #small-coin-text {
+      color: #000;
+      font-family: Inter, sans-serif;
+      font-size: clamp(12px, 2vw, 15px);
+      font-style: normal;
+      font-weight: 700;
+      text-transform: capitalize;
+    }
+    & #currency_ {
+      color: #57bec0;
+      font-family: Inter, sans-serif;
+      font-size: clamp(20px, 2vw, 25px);
+      font-style: normal;
+      font-weight: 700;
+      text-transform: capitalize;
+    }
+  }
+}
+.svg-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: #f5f7ff;
+  border-radius: 8px;
+}
+
+#sidebar_nav {
+  min-height: 100vh;
+  position: fixed;
+}
+/* #sidebar_nav {
+  max-height: 92vh;
+  position: fixed;
+  overflow: auto;
+} */
+
+.nav-min {
+  width: 80px;
+  transition: 0.4s;
+}
+
+.nav-min h1,
+.nav-min span {
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.2s;
+}
+
+.nav-max {
+  width: 220px;
+  transition: 0.6s;
+}
+
+.nav-max span,
+.nav-max h1 {
+  overflow: clip;
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.hamburger-menu-button {
+  width: 50px;
+  height: 50px;
+  /* display: block; */
+  /* display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative; */
+  z-index: 100;
+  background: #f5f7ff;
+  border: 5px solid white;
+  border-radius: 15px;
+  color: white;
+  white-space: nowrap;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.5 ease-in-out;
+}
+
+.my-wallet {
+  padding: 1rem;
+  margin: 1rem 0.7rem;
+  max-height: 200px;
+  min-height: 80px;
+  background-color: #f5f7ff;
+  border-radius: 27px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5rem;
+  & img {
+    width: 45px;
+  }
+  & p,
+  & button {
+    text-align: center;
+    color: #9ba9d6;
+    font-family: "TT Commons", sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    text-transform: capitalize;
+    transition: height 1s ease-in-out;
+  }
+  & button {
+    border: none;
+    outline: none;
+    border-radius: 44px;
+    background: #1e3caa;
+    padding: 0.7rem 1.8rem;
+    color: #fff;
+    font-family: Inter, sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    text-transform: capitalize;
+  }
+  &.closed p,
+  &.closed button {
+    display: none;
+    overflow: hidden;
+  }
+}

@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "TT commons";
+  src: url("./assets/font/TT\ Commons\ Regular.otf") format("otf");
+}
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/font/Inter-Regular.otf") format("otf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "TT commons", sans-serif ;
+}
+
+

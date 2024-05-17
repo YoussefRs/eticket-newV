@@ -1,0 +1,534 @@
+._MainDash {
+  border: 1px solid red;
+}
+
+.dash_dates {
+  & span {
+    background-color: #fff;
+    color: #1e3caa;
+    font-family: "TT Commons", sans-serif;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+    padding: 0.2rem 1rem;
+    border-radius: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+}
+@media screen and (max-width: 520px) {
+  .dash_dates {
+    flex-direction: column;
+  }
+}
+
+.dash_content {
+  & .ddiv {
+    height: 600px;
+  }
+}
+
+.user_details_outerbox {
+  position: relative;
+  display: flex;
+}
+
+.user_details_innerbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  align-self: flex-end;
+  padding-bottom: 0.7rem;
+  position: relative;
+  min-height: 360px;
+}
+
+.user_details_innerbox::before {
+  content: "";
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0px 9px 38px 0px #cdd2ff;
+  bottom: 0;
+  border-radius: 40px;
+  position: absolute;
+  z-index: 0;
+}
+
+@media (min-width: 576px) {
+  .user_details_innerbox::before {
+    height: 75%;
+  }
+}
+@media (max-width: 576px) {
+  .user_details_innerbox::before {
+    height: 80%;
+  }
+}
+
+/* .user_image img {
+    max-width: 100%;
+  }
+  
+  .user_image {
+    z-index: 100;
+  } */
+
+.user_image {
+  z-index: 100;
+  width: clamp(100px, 8vw, 150px);
+  & img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+}
+.user_name {
+  font-family: "TT Commons Bold", sans-serif;
+  color: #1e3caa;
+  z-index: 1;
+}
+
+.user_detail_text,
+.user_detail_text a {
+  color: #1e3caa;
+}
+
+.user_details_button {
+  border-radius: 30px;
+  background: #1e3caa !important;
+  box-shadow: 0px 10px 10px 0px rgba(68, 71, 144, 0.25);
+  color: #fff !important;
+  width: 90%;
+  font-family: "TT Commons", sans-serif;
+  z-index: 1;
+  font-weight: 700;
+}
+
+/* SALES CSS */
+
+.sales_amount_innerbox {
+  border-radius: 40px;
+  background: #fff;
+  box-shadow: 0px 9px 38px 0px #cdd2ff;
+  height: 100%;
+  padding-top: 1.5rem;
+  overflow: hidden;
+}
+
+.sales_amount_value {
+  color: #1e3caa;
+}
+
+.sales_amount_header,
+.sales_amount_value {
+  padding: 0 1.5rem;
+}
+
+.sales_amount_chart {
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100px;
+}
+
+.before_decimal {
+  font-weight: 900;
+}
+
+@media (min-width: 1440px) {
+  .currency {
+    color: #57bec0;
+    align-self: flex-end;
+    font-size: 3rem;
+    font-family: "TT Commons Bold", sans-serif;
+  }
+
+  .before_decimal {
+    font-size: 4rem;
+  }
+
+  .after_decimal {
+    font-size: 2.5rem;
+    margin-top: 0.7rem;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1440px) and (max-height: 750px) {
+  .currency {
+    color: #57bec0;
+    align-self: flex-end;
+    font-size: 2rem;
+    font-family: "TT Commons Bold", sans-serif;
+  }
+
+  .before_decimal {
+    font-size: 3rem;
+  }
+
+  .after_decimal {
+    font-size: 1.5rem;
+    margin-top: 0.6rem;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1440px) and (min-height: 750px) {
+  .currency {
+    color: #57bec0;
+    align-self: flex-end;
+    font-size: 2.5rem;
+    font-family: "TT Commons Bold", sans-serif;
+  }
+
+  .before_decimal {
+    font-size: 3.5rem;
+  }
+
+  .after_decimal {
+    font-size: 2rem;
+    margin-top: 0.6rem;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .currency {
+    color: #57bec0;
+    align-self: flex-end;
+    font-size: 2.5rem;
+    font-family: "TT Commons Bold", sans-serif;
+  }
+
+  .before_decimal {
+    font-size: 3.5rem;
+  }
+
+  .after_decimal {
+    font-size: 2rem;
+    margin-top: 0.8rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .currency {
+    color: #57bec0;
+    align-self: flex-end;
+    font-size: 2.5rem;
+    font-family: "TT Commons Bold", sans-serif;
+  }
+
+  .before_decimal {
+    font-size: 4rem;
+  }
+
+  .after_decimal {
+    font-size: 2rem;
+    margin-top: 1rem;
+  }
+
+  .orders_outerbox {
+    order: 5;
+  }
+
+  .next_event_outerbox {
+    order: 4;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .currency {
+    color: #57bec0;
+    align-self: flex-end;
+    font-size: 2rem;
+    font-family: "TT Commons Bold", sans-serif;
+  }
+
+  .before_decimal {
+    font-size: 3rem;
+  }
+
+  .after_decimal {
+    font-size: 1.5rem;
+    margin-top: 0.7rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .currency {
+    color: #57bec0;
+    align-self: flex-end;
+    font-size: 2.5rem;
+    padding-bottom: 0.5rem;
+    font-family: "TT Commons Bold", sans-serif;
+  }
+
+  .before_decimal {
+    font-size: 4rem;
+  }
+
+  .after_decimal {
+    font-size: 2rem;
+    margin-top: 1rem;
+  }
+}
+
+/* orders styles */
+
+.orders_list {
+  max-height: 85%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.orders_innerbox {
+  border-radius: 40px;
+  background: #fff;
+  box-shadow: 0px 9px 38px 0px #cdd2ff;
+  height: 100%;
+  padding: 1.5rem 1.5rem 3rem;
+}
+
+@media (max-width: 425px) {
+  .orders_innerbox h2 {
+    font-size: 1.2rem;
+  }
+
+  .orders_date {
+    font-size: 0.7rem;
+  }
+}
+
+.orders_date {
+  color: #bdcbfc;
+  text-align: start;
+}
+
+@media (min-width: 1440px) {
+  .orders_list_element_detail {
+    color: #1e3caa;
+    font-family: "TT Commons Bold", sans-serif;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1440px) {
+  .orders_list_element_detail {
+    color: #1e3caa;
+    font-family: "TT Commons Bold", sans-serif;
+    font-size: 0.7rem;
+  }
+
+  .orders_list_element_icon svg {
+    width: 35px;
+    height: 30px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .orders_list_element_detail {
+    color: #1e3caa;
+    font-family: "TT Commons Bold", sans-serif;
+    font-size: 0.8rem;
+  }
+
+  .orders_list_element_icon svg {
+    width: 35px;
+    height: 30px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 992px) {
+  .orders_list_element_detail {
+    color: #1e3caa;
+    font-family: "TT Commons Bold", sans-serif;
+    font-size: 0.8rem;
+  }
+
+  .orders_list_element_icon svg {
+    width: 35px;
+    height: 30px;
+  }
+}
+
+@media (min-width: 425px) and (max-width: 576px) {
+  .orders_list_element_detail {
+    color: #1e3caa;
+    font-family: "TT Commons Bold", sans-serif;
+    font-size: 0.6rem;
+  }
+
+  .orders_list_element_icon svg {
+    width: 25px;
+    height: 25px;
+  }
+
+  .orders_list_element_button svg {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+@media (max-width: 425px) {
+  .orders_list_element_detail {
+    color: #1e3caa;
+    font-family: "TT Commons Bold", sans-serif;
+    font-size: 0.5rem;
+  }
+
+  .orders_list_element_icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .orders_list_element_button svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.orders_list_element {
+  border-bottom: #e9eeff solid 0.857px;
+}
+
+.orders_list_element:last-of-type {
+  border: none;
+}
+
+.orders_list_element_button:hover,
+.orders_list_element_button:focus,
+.orders_list_element_button {
+  border: none;
+}
+
+.orders_innerbox {
+  position: relative;
+}
+
+.orders_list_more_button {
+  color: #1e3caa;
+  text-decoration: underline;
+  position: absolute;
+  right: 1.5rem;
+  bottom: 1rem;
+  font-size: 1.2rem;
+  margin-bottom: 0;
+}
+
+.orders_list_more_button:hover {
+  color: #1e3caa;
+  cursor: pointer;
+}
+
+/* ***************Pie chart**************** */
+
+.tables {
+  display: grid;
+  grid-template-rows: min-content 1fr;
+  max-height: 400px;
+  overflow: auto;
+  color: white;
+  border-radius: 40px;
+}
+
+.booking_table {
+  width: 100%;
+  min-width: 800px;
+  border-radius: 40px;
+}
+.table__wrapper {
+  width: 100%;
+  max-height: 100%;
+  overflow: auto;
+}
+.booking_table tr {
+  display: grid;
+  /* grid: auto/200px 250px 1fr 1fr 1fr; */
+  grid: auto/1.2fr 1fr 1fr 1fr 0.3fr;
+  align-items: center;
+}
+
+.table__body tr {
+  margin-bottom: 2px;
+  color: #343642;
+  text-align: left;
+  font-family: "TT Commons", sans-serif;
+  font-size: clamp(15px, 1vw, 18px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 165.523%; /* 29.794px */
+  text-transform: capitalize;
+  padding: 1rem 0;
+  border-bottom: 1px dashed rgba(149, 156, 194, 0.5);
+}
+
+.table__body tr:last-child {
+  border-bottom: none;
+}
+
+@media (max-width: 768px) {
+  /* body {
+    grid-template-rows: auto min-content;
+  }
+
+  main {
+    grid: min-content auto auto/100%;
+    height: auto;
+  } */
+
+  .tables {
+    grid-row: 2/3;
+  }
+  .tables .table__wrapper {
+    max-height: none;
+  }
+  .stats {
+    grid-row: 3/4;
+  }
+}
+
+/* **************Cards CSS ******************** */
+
+#card-long {
+  border-radius: 40px;
+}
+.card-body {
+  background-color: white;
+  border-radius: 40px;
+  background: #fff;
+  box-shadow: 0px 9px 38px 0px #cdd2ff;
+  & h3 {
+    color: #000;
+    font-family: "TT Commons", sans-serif;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    text-transform: capitalize;
+  }
+
+  & button {
+    color: #4a6aff;
+    font-family: Mont, sans-serif;
+    font-size: clamp(16px, 2vw, 20px);
+    font-style: normal;
+    font-weight: 900;
+    line-height: 165.523%;
+    text-transform: capitalize;
+    border: none;
+    border-radius: 15px;
+    background: #ffffff54;
+    box-shadow: 0 0 9px #4667ff5e;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: max-content;
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .button--override {
+    & span {
+      display: none;
+    }
+  }
+}
